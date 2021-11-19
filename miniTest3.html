@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Bài 1
+        let number = parseInt(prompt("Nhập số phần tử trong mảng"));
+        let array = new Array(number);
+        for (i = 0; i < number; i++) {
+            let input = parseFloat(prompt("Nhập các phần tử trong mảng"));
+            array[i] = input;
+        }
+        function countParameter(array) {
+            for (j = 0; j < array.length; j++) {
+                let count = 0;
+                if (array[j] % 3 == 0) {
+                    count = count + 1;
+                    return count;
+                }
+            }
+            return ("-1");
+        }
+        document.write(countParameter(array));
+
+        // Bài 2
+        let number = parseInt(prompt("Nhập số phần tử trong mảng"));
+        let array = new Array(number);
+        for (i = 0; i < number; i++) {
+            let input = prompt("Nhập các phần tử trong mảng");
+            array[i] = input;
+        }
+        function check(array) {
+            for (i = 0; i < array.length-1; i++) {
+                let count = 0
+                if (array[i] === array[array.length-1]) {
+                    count++;
+                    return count;
+                }
+            }
+        }
+        document.write(check(array));
+        console.log(typeof array[array.length-1]);
+
+        // Bài 3
+        let number = parseInt(prompt("Nhập số phần tử trong mảng"));
+        let array = new Array(number);
+        for (i = 0; i < number; i++) {
+            let input = parseInt(prompt("Nhập các phần tử trong mảng (là các số nguyên)"));
+            array[i] = input;
+        }
+        function checkInteger(array) {
+            for (i = 0; i < array.length; i++) {
+                let sum = 0
+                if (array[i] < 200) {
+                    sum = sum + i;
+                    return sum;
+                }
+            }
+            return sum;
+        }
+        document.write(checkInteger(array));
+
+        // Bài 4
+        let number = parseInt(prompt("Nhập số phần tử trong mảng"));
+        let array = new Array(number);
+        for (i = 0; i < number; i++) {
+            let input = parseInt(prompt("Nhập các phần tử trong mảng (là các số nguyên)"));
+            array[i] = input;
+        }
+        console.log(array);
+        function checkParameter(array) {
+            for (i = 0; i < array.length; i++) {
+                if (array[i] % 3 != 0 && array[i] % 5 != 5) {
+                    return ("codegym");
+                } else if (array[i] % 3 == 0) {
+                    return ("C1021H1");
+                } else if (array[i] % 5 == 0) {
+                    return ("Hello World");
+                }
+            }
+        }
+        document.write(checkParameter(array));
+    // </script>
+</body>
+</html>
